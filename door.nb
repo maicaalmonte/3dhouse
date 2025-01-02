@@ -1,0 +1,169 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[      5890,        159]
+NotebookOptionsPosition[      5403,        142]
+NotebookOutlinePosition[      5805,        158]
+CellTagsIndexPosition[      5762,        155]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Define", " ", "the", " ", "main", " ", "body", " ", "of", " ", "the", " ",
+     "door"}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"mainDoor", " ", "=", " ", 
+     RowBox[{"Cuboid", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", " ", "0.1", ",", " ", "2"}], "}"}]}], "]"}]}], 
+    ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Define", " ", "the", " ", "door", " ", "panels"}], " ", "*)"}], 
+   "\n", 
+   RowBox[{
+    RowBox[{"panels", " ", "=", " ", 
+     RowBox[{"{", "\n", "   ", 
+      RowBox[{
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0.1", ",", " ", "0.1", ",", " ", "0.3"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"0.9", ",", " ", "0.2", ",", " ", "0.6"}], "}"}]}], "]"}], 
+       ",", "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0.1", ",", " ", "0.1", ",", " ", "1.4"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"0.9", ",", " ", "0.2", ",", " ", "1.7"}], "}"}]}], "]"}]}],
+       "\n", "}"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Define", " ", "the", " ", "door", " ", "handle"}], " ", "*)"}], 
+   "\n", 
+   RowBox[{
+    RowBox[{"handle", " ", "=", " ", 
+     RowBox[{"{", "\n", "   ", 
+      RowBox[{
+       RowBox[{"Cylinder", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0.9", ",", " ", "0.15", ",", " ", "1"}], "}"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"0.9", ",", " ", "0.25", ",", " ", "1"}], "}"}]}], "}"}], 
+         ",", " ", "0.05"}], "]"}], ",", "\n", "   ", 
+       RowBox[{"Sphere", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0.9", ",", " ", "0.25", ",", " ", "1"}], "}"}], ",", " ", 
+         "0.05"}], "]"}]}], "\n", "}"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Combine", " ", "all", " ", "parts", " ", "into", " ", "a", " ", "single",
+      " ", "3", "D", " ", "graphic", " ", "using", " ", "brown", " ", 
+     "color"}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"complexDoor", " ", "=", " ", 
+     RowBox[{"Graphics3D", "[", "\n", "  ", 
+      RowBox[{
+       RowBox[{"{", "\n", "   ", 
+        RowBox[{
+         RowBox[{"EdgeForm", "[", "Black", "]"}], ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Outline", " ", "edges", " ", "in", " ", "black"}], " ", 
+          "*)"}], "\n", "   ", 
+         RowBox[{"FaceForm", "[", "White", "]"}], ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Color", " ", "the", " ", "white"}], " ", "*)"}], "\n", 
+         "   ", "mainDoor", ",", "\n", "   ", 
+         RowBox[{"FaceForm", "[", "White", "]"}], ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Color", " ", "the", " ", "panels", " ", "white"}], " ", 
+          "*)"}], "\n", "   ", "panels", ",", "\n", "   ", 
+         RowBox[{"FaceForm", "[", "Black", "]"}], ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Color", " ", "the", " ", "handle", " ", "black"}], " ", 
+          "*)"}], "\n", "   ", "handle"}], "\n", "  ", "}"}], ",", "\n", "  ", 
+       RowBox[{"Boxed", " ", "->", " ", "False"}], ",", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Remove", " ", "the", " ", "surrounding", " ", "box"}], " ", 
+        "*)"}], "\n", "  ", 
+       RowBox[{"Axes", " ", "->", " ", "False"}]}], "   ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Remove", " ", "the", " ", "axes"}], " ", "*)"}], "\n", 
+      "]"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{"Display", " ", "the", " ", "3", "D", " ", "door"}], " ", "*)"}], 
+   "\n", "complexDoor"}]}]], "Code",
+ CellChangeTimes->{
+  3.944787240600088*^9, {3.944787278617359*^9, 3.944787315718794*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"77f7a7b0-d371-9a4e-a00a-244c0de62541"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  {EdgeForm[GrayLevel[0]], FaceForm[GrayLevel[1]], 
+   CuboidBox[{0, 0, 0}, {1, 0.1, 2}], 
+   {FaceForm[GrayLevel[1]], CuboidBox[{0.1, 0.1, 0.3}, {0.9, 0.2, 0.6}], 
+    CuboidBox[{0.1, 0.1, 1.4}, {0.9, 0.2, 1.7}]}, 
+   {FaceForm[GrayLevel[0]], 
+    CylinderBox[{{0.9, 0.15, 1}, {0.9, 0.25, 1}}, 0.05], 
+    SphereBox[{0.9, 0.25, 1}, 0.05]}},
+  Axes->False,
+  Boxed->False,
+  ImageSize->{263.1355408735288, 450.6096847673177},
+  ImageSizeRaw->Automatic,
+  ViewPoint->{1.61271866470184, 2.972316241543191, 0.1203107176475755},
+  ViewVertical->{0.09713804016820297, 0.9704995437016171, 
+   0.22066906631250724`}]], "Output",
+ CellChangeTimes->{3.9447872427958393`*^9, 3.944787320405918*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"c82e985b-0c94-8e4a-8c25-dc9fcfb47ebd"]
+}, Open  ]]
+},
+WindowSize->{960, 472},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4b6b10fc-7bab-c64f-a18f-5840c5c78797"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 4012, 98, 594, "Code",ExpressionUUID->"77f7a7b0-d371-9a4e-a00a-244c0de62541"],
+Cell[4591, 122, 796, 17, 467, "Output",ExpressionUUID->"c82e985b-0c94-8e4a-8c25-dc9fcfb47ebd"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
