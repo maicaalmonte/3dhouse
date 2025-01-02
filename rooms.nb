@@ -1,0 +1,327 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     12300,        317]
+NotebookOptionsPosition[     11810,        300]
+NotebookOutlinePosition[     12212,        316]
+CellTagsIndexPosition[     12169,        313]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Define", " ", "the", " ", "walls", " ", "of", " ", "the", " ", "living", 
+    " ", "room", " ", "and", " ", "three", " ", "rooms"}], " ", "*)"}], "\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"walls", " ", "=", " ", 
+     RowBox[{"{", "\n", "   ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Living", " ", "room", " ", "outer", " ", "walls"}], " ", 
+       "*)"}], "\n", "   ", 
+      RowBox[{
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"10", ",", " ", "0.1", ",", " ", "3"}], "}"}]}], "]"}], ",",
+        "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Bottom", " ", "wall"}], " ", "*)"}], "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", " ", "10", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"10", ",", " ", "10.1", ",", " ", "3"}], "}"}]}], "]"}], 
+       ",", "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Top", " ", "wall"}], " ", "*)"}], "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"0.1", ",", " ", "10", ",", " ", "3"}], "}"}]}], "]"}], ",",
+        "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Left", " ", "wall"}], " ", "*)"}], "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"10", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"10.1", ",", " ", "10", ",", " ", "3"}], "}"}]}], "]"}], 
+       ",", "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Right", " ", "wall"}], " ", "*)"}], "\n", "\n", "   ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Internal", " ", "walls", " ", "for", " ", "rooms"}], " ", 
+        "*)"}], "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"3", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"3.1", ",", " ", "10", ",", " ", "3"}], "}"}]}], "]"}], ",",
+        "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Divider", " ", "wall", " ", "1"}], " ", "*)"}], "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"6", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"6.1", ",", " ", "10", ",", " ", "3"}], "}"}]}], "]"}], ",",
+        "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Divider", " ", "wall", " ", "2"}], " ", "*)"}], "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", " ", "7", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"6.1", ",", " ", "7.1", ",", " ", "3"}], "}"}]}], "]"}]}], 
+      "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Divider", " ", "wall", " ", "3"}], " ", "*)"}], "\n", "}"}]}],
+     ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Define", " ", "the", " ", "doors", " ", "for", " ", "each", " ", 
+     "room"}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"doors", " ", "=", " ", 
+     RowBox[{"{", "\n", "   ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Doors", " ", "for", " ", "the", " ", "rooms"}], " ", "*)"}], 
+      "\n", "   ", 
+      RowBox[{
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2.5", ",", " ", "10", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"3.5", ",", " ", "10.1", ",", " ", "2"}], "}"}]}], "]"}], 
+       ",", "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Door", " ", "to", " ", "room", " ", "1"}], " ", "*)"}], "\n",
+        "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"5.5", ",", " ", "10", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"6.5", ",", " ", "10.1", ",", " ", "2"}], "}"}]}], "]"}], 
+       ",", "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Door", " ", "to", " ", "room", " ", "2"}], " ", "*)"}], "\n",
+        "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"8.5", ",", " ", "10", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"9.5", ",", " ", "10.1", ",", " ", "2"}], "}"}]}], "]"}], 
+       ",", "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Door", " ", "to", " ", "room", " ", "3"}], " ", "*)"}], "\n",
+        "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1.5", ",", " ", "7", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"2.5", ",", " ", "7.1", ",", " ", "2"}], "}"}]}], "]"}], 
+       ",", "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Internal", " ", "door", " ", "1"}], " ", "*)"}], "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"4.5", ",", " ", "7", ",", " ", "0"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"5.5", ",", " ", "7.1", ",", " ", "2"}], "}"}]}], "]"}]}], 
+      "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Internal", " ", "door", " ", "2"}], " ", "*)"}], "\n", 
+      "}"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Define", " ", "the", " ", "windows", " ", "for", " ", "the", " ", 
+     "living", " ", "room"}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"windows", " ", "=", " ", 
+     RowBox[{"{", "\n", "   ", 
+      RowBox[{
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", " ", "0.1", ",", " ", "2"}], "}"}]}], "]"}], ",", 
+       "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Bottom", " ", "wall", " ", "window"}], " ", "*)"}], "\n", 
+       "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"8", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"9", ",", " ", "0.1", ",", " ", "2"}], "}"}]}], "]"}], ",", 
+       "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Bottom", " ", "wall", " ", "window"}], " ", "*)"}], "\n", 
+       "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", " ", "10", ",", " ", "1"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", " ", "10.1", ",", " ", "2"}], "}"}]}], "]"}], ",",
+        "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Top", " ", "wall", " ", "window"}], " ", "*)"}], "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"8", ",", " ", "10", ",", " ", "1"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"9", ",", " ", "10.1", ",", " ", "2"}], "}"}]}], "]"}], ",",
+        "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Top", " ", "wall", " ", "window"}], " ", "*)"}], "\n", "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0.1", ",", " ", "4", ",", " ", "1"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"0.2", ",", " ", "5", ",", " ", "2"}], "}"}]}], "]"}], ",", 
+       "  ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Left", " ", "wall", " ", "window"}], " ", "*)"}], "\n", 
+       "   ", 
+       RowBox[{"Cuboid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"10", ",", " ", "4", ",", " ", "1"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"10.1", ",", " ", "5", ",", " ", "2"}], "}"}]}], "]"}]}], 
+      "   ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Right", " ", "wall", " ", "window"}], " ", "*)"}], "\n", 
+      "}"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Combine", " ", "all", " ", "parts", " ", "into", " ", "a", " ", "single",
+      " ", "3", "D", " ", "graphic"}], " ", "*)"}], "\n", 
+   RowBox[{
+    RowBox[{"livingRoom", " ", "=", " ", 
+     RowBox[{"Graphics3D", "[", "\n", "  ", 
+      RowBox[{
+       RowBox[{"{", "\n", "   ", 
+        RowBox[{
+         RowBox[{"EdgeForm", "[", "Black", "]"}], ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Outline", " ", "edges", " ", "in", " ", "black"}], " ", 
+          "*)"}], "\n", "   ", 
+         RowBox[{"FaceForm", "[", "White", "]"}], ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Color", " ", "the", " ", "walls", " ", "white"}], " ", 
+          "*)"}], "\n", "   ", "walls", ",", "\n", "   ", 
+         RowBox[{"FaceForm", "[", "Brown", "]"}], ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Color", " ", "the", " ", "doors", " ", "brown"}], " ", 
+          "*)"}], "\n", "   ", "doors", ",", "\n", "   ", 
+         RowBox[{"FaceForm", "[", "LightBlue", "]"}], ",", " ", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "Color", " ", "the", " ", "windows", " ", "light", " ", "blue"}], 
+          " ", "*)"}], "\n", "   ", "windows"}], "\n", "  ", "}"}], ",", "\n",
+        "  ", 
+       RowBox[{"Boxed", " ", "->", " ", "False"}], ",", " ", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Remove", " ", "the", " ", "surrounding", " ", "box"}], " ", 
+        "*)"}], "\n", "  ", 
+       RowBox[{"Axes", " ", "->", " ", "False"}]}], "   ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Remove", " ", "the", " ", "axes"}], " ", "*)"}], "\n", 
+      "]"}]}], ";"}], "\n", "\n", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Display", " ", "the", " ", "3", "D", " ", "living", " ", "room"}], " ", 
+    "*)"}], "\n", "livingRoom"}]}]], "Code",
+ CellChangeTimes->{3.9447875826301155`*^9},
+ CellLabel->"In[28]:=",ExpressionUUID->"817eba4f-6c20-0c4a-a66f-ca3b7142c6df"],
+
+Cell[BoxData[
+ Graphics3DBox[
+  {EdgeForm[GrayLevel[0]], FaceForm[GrayLevel[
+   1]], {CuboidBox[{0, 0, 0}, {10, 0.1, 3}], 
+    CuboidBox[{0, 10, 0}, {10, 10.1, 3}], CuboidBox[{0, 0, 0}, {0.1, 10, 3}], 
+    CuboidBox[{10, 0, 0}, {10.1, 10, 3}], CuboidBox[{3, 0, 0}, {3.1, 10, 3}], 
+    CuboidBox[{6, 0, 0}, {6.1, 10, 3}], CuboidBox[{0, 7, 0}, {6.1, 7.1, 3}]}, 
+   {FaceForm[RGBColor[0.6, 0.4, 0.2]], 
+    CuboidBox[{2.5, 10, 0}, {3.5, 10.1, 2}], 
+    CuboidBox[{5.5, 10, 0}, {6.5, 10.1, 2}], 
+    CuboidBox[{8.5, 10, 0}, {9.5, 10.1, 2}], 
+    CuboidBox[{1.5, 7, 0}, {2.5, 7.1, 2}], 
+    CuboidBox[{4.5, 7, 0}, {5.5, 7.1, 2}]}, 
+   {FaceForm[RGBColor[0.87, 0.94, 1]], CuboidBox[{1, 0, 1}, {2, 0.1, 2}], 
+    CuboidBox[{8, 0, 1}, {9, 0.1, 2}], CuboidBox[{1, 10, 1}, {2, 10.1, 2}], 
+    CuboidBox[{8, 10, 1}, {9, 10.1, 2}], CuboidBox[{0.1, 4, 1}, {0.2, 5, 2}], 
+    CuboidBox[{10, 4, 1}, {10.1, 5, 2}]}},
+  Axes->False,
+  Boxed->False,
+  ImageSize->{367.80346940085553`, 326.3588455267144},
+  ImageSizeRaw->Automatic,
+  ViewPoint->{0.6595878695797441, 2.551272024359309, 2.1227234629185237`},
+  ViewVertical->{-0.11455020715829471`, 0.03365648701567208, 
+   0.992847163928948}]], "Output",
+ CellChangeTimes->{{3.944787587053898*^9, 3.944787587163357*^9}},
+ CellLabel->"Out[32]=",ExpressionUUID->"768fa015-1b46-d049-a3b1-da4079757693"]
+}, Open  ]]
+},
+WindowSize->{960, 472},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"5c09c402-d5c7-c54f-a94c-e893f6f6c56e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 9885, 248, 928, "Code",ExpressionUUID->"817eba4f-6c20-0c4a-a66f-ca3b7142c6df"],
+Cell[10464, 272, 1330, 25, 343, "Output",ExpressionUUID->"768fa015-1b46-d049-a3b1-da4079757693"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
