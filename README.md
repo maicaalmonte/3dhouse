@@ -3,6 +3,8 @@
 #
 **H O B B Y**
 #
+NEXT WEEK ULIT KAPAGOD ARALIN MGA COORDINATES😭😂
+#
 ![Screenshot 2025-01-05 094633](https://github.com/user-attachments/assets/198da542-c856-481f-b8dc-629ec291cfe7)
 
 #
