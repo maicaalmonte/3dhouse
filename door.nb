@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[      5890,        159]
-NotebookOptionsPosition[      5403,        142]
-NotebookOutlinePosition[      5805,        158]
-CellTagsIndexPosition[      5762,        155]
+NotebookDataLength[      6239,        164]
+NotebookOptionsPosition[      5755,        147]
+NotebookOutlinePosition[      6153,        163]
+CellTagsIndexPosition[      6110,        160]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -115,10 +115,14 @@ Cell[BoxData[
       "]"}]}], ";"}], "\n", "\n", 
    RowBox[{"(*", " ", 
     RowBox[{"Display", " ", "the", " ", "3", "D", " ", "door"}], " ", "*)"}], 
-   "\n", "complexDoor"}]}]], "Code",
+   "\n", "complexDoor", "\n", "\n", "\n"}]}]], "Code",
  CellChangeTimes->{
-  3.944787240600088*^9, {3.944787278617359*^9, 3.944787315718794*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"77f7a7b0-d371-9a4e-a00a-244c0de62541"],
+  3.944787240600088*^9, {3.944787278617359*^9, 3.944787315718794*^9}, {
+   3.944788967252449*^9, 3.9447890530575695`*^9}, {3.944789084228571*^9, 
+   3.944789100707985*^9}, {3.9447892554353256`*^9, 3.944789292705284*^9}, {
+   3.9447893304851494`*^9, 3.9447893312213573`*^9}, {3.944789527654257*^9, 
+   3.9447895454756355`*^9}},
+ CellLabel->"In[58]:=",ExpressionUUID->"77f7a7b0-d371-9a4e-a00a-244c0de62541"],
 
 Cell[BoxData[
  Graphics3DBox[
@@ -131,17 +135,18 @@ Cell[BoxData[
     SphereBox[{0.9, 0.25, 1}, 0.05]}},
   Axes->False,
   Boxed->False,
-  ImageSize->{263.1355408735288, 450.6096847673177},
-  ImageSizeRaw->Automatic,
+  ImageSize->{207.13554087352878`, 354.7117978334575},
   ViewPoint->{1.61271866470184, 2.972316241543191, 0.1203107176475755},
   ViewVertical->{0.09713804016820297, 0.9704995437016171, 
    0.22066906631250724`}]], "Output",
- CellChangeTimes->{3.9447872427958393`*^9, 3.944787320405918*^9},
- CellLabel->"Out[22]=",ExpressionUUID->"c82e985b-0c94-8e4a-8c25-dc9fcfb47ebd"]
+ CellChangeTimes->{
+  3.9447872427958393`*^9, 3.944787320405918*^9, {3.9447893005558834`*^9, 
+   3.944789300700159*^9}, 3.9447893337717495`*^9, 3.9447895477531033`*^9},
+ CellLabel->"Out[62]=",ExpressionUUID->"cdc4431d-36a3-5d41-b61b-aee467879774"]
 }, Open  ]]
 },
-WindowSize->{960, 472},
-WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+WindowSize->{934, 466.5},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"4b6b10fc-7bab-c64f-a18f-5840c5c78797"
@@ -158,12 +163,10 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[576, 22, 4012, 98, 594, "Code",ExpressionUUID->"77f7a7b0-d371-9a4e-a00a-244c0de62541"],
-Cell[4591, 122, 796, 17, 467, "Output",ExpressionUUID->"c82e985b-0c94-8e4a-8c25-dc9fcfb47ebd"]
+Cell[576, 22, 4286, 102, 647, "Code",ExpressionUUID->"77f7a7b0-d371-9a4e-a00a-244c0de62541"],
+Cell[4865, 126, 874, 18, 371, "Output",ExpressionUUID->"cdc4431d-36a3-5d41-b61b-aee467879774"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

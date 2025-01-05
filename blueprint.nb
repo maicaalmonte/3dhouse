@@ -1,0 +1,361 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     13822,        351]
+NotebookOptionsPosition[     13467,        337]
+NotebookOutlinePosition[     13863,        353]
+CellTagsIndexPosition[     13820,        350]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Graphics3D", "[", "\n", "  ", 
+   RowBox[{
+    RowBox[{"{", "\n", "    ", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Floor", ":", " ", 
+       RowBox[{
+       "This", " ", "is", " ", "the", " ", "base", " ", "of", " ", "the", " ",
+         "room", " ", "where", " ", "everything", " ", "sits"}]}], " ", 
+      "*)"}], "\n", "    ", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"20", ",", " ", "20", ",", " ", "0.2"}], "}"}]}], "]"}], 
+        ",", " ", 
+        RowBox[{"Opacity", "[", "0.3", "]"}], ",", " ", "LightBlue", ",", " ", 
+        RowBox[{"Specularity", "[", 
+         RowBox[{"White", ",", " ", "100"}], "]"}]}], "]"}], ",", "\n", "\n", 
+      "    ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Round", " ", 
+        RowBox[{"Table", ":", " ", 
+         RowBox[{
+         "Represents", " ", "a", " ", "circular", " ", "tabletop", " ", 
+          "with", " ", "a", " ", "cylindrical", " ", 
+          RowBox[{"base", "."}]}]}]}], " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cylinder", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"5", ",", " ", "5", ",", " ", "0.6"}], "}"}], ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"5", ",", " ", "5", ",", " ", "0.8"}], "}"}]}], "}"}], 
+          ",", " ", "1"}], "]"}], ",", " ", "White"}], "]"}], ",", " ", 
+      RowBox[{"(*", " ", "Tabletop", " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cylinder", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"5", ",", " ", "5", ",", " ", "0"}], "}"}], ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"5", ",", " ", "5", ",", " ", "0.6"}], "}"}]}], "}"}], 
+          ",", " ", "0.2"}], "]"}], ",", " ", "White"}], "]"}], ",", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Table", " ", "leg"}], " ", "*)"}], "\n", "\n", "    ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Chairs", " ", "around", " ", "the", " ", "table"}], " ", 
+       "*)"}], "\n", "    ", 
+      RowBox[{"Table", "[", "\n", "      ", 
+       RowBox[{
+        RowBox[{"{", "\n", "        ", 
+         RowBox[{
+          RowBox[{"Style", "[", "\n", "          ", 
+           RowBox[{
+            RowBox[{"Cuboid", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"5", " ", "+", " ", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"Cos", "[", "theta", "]"}]}], " ", "-", " ", 
+                 "0.3"}], ",", " ", 
+                RowBox[{"5", " ", "+", " ", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"Sin", "[", "theta", "]"}]}], " ", "-", " ", 
+                 "0.3"}], ",", " ", "0.5"}], "}"}], ",", "\n", 
+              "                 ", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"5", " ", "+", " ", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"Cos", "[", "theta", "]"}]}], " ", "+", " ", 
+                 "0.3"}], ",", " ", 
+                RowBox[{"5", " ", "+", " ", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"Sin", "[", "theta", "]"}]}], " ", "+", " ", 
+                 "0.3"}], ",", " ", "1"}], "}"}]}], "]"}], ",", "\n", 
+            "          ", "White"}], "\n", "        ", "]"}], ",", " ", 
+          RowBox[{"(*", " ", 
+           RowBox[{"Chair", " ", "Seat"}], " ", "*)"}], "\n", "        ", 
+          RowBox[{"Style", "[", "\n", "          ", 
+           RowBox[{
+            RowBox[{"Cuboid", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"5", " ", "+", " ", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"Cos", "[", "theta", "]"}]}], " ", "-", " ", 
+                 "0.3"}], ",", " ", 
+                RowBox[{"5", " ", "+", " ", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"Sin", "[", "theta", "]"}]}], " ", "-", " ", 
+                 "0.3"}], ",", " ", "1"}], "}"}], ",", "\n", 
+              "                 ", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"5", " ", "+", " ", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"Cos", "[", "theta", "]"}]}], " ", "+", " ", 
+                 "0.3"}], ",", " ", 
+                RowBox[{"5", " ", "+", " ", 
+                 RowBox[{"2", " ", 
+                  RowBox[{"Sin", "[", "theta", "]"}]}], " ", "-", " ", 
+                 "0.2"}], ",", " ", "1.5"}], "}"}]}], "]"}], ",", "\n", 
+            "          ", "Black"}], "\n", "        ", "]"}]}], "  ", 
+         RowBox[{"(*", " ", 
+          RowBox[{"Chair", " ", "Backrest"}], " ", "*)"}], "\n", "      ", 
+         "}"}], ",", "\n", "      ", 
+        RowBox[{"{", 
+         RowBox[{"theta", ",", " ", "0", ",", " ", 
+          RowBox[{
+           RowBox[{"2", " ", "Pi"}], " ", "-", " ", 
+           RowBox[{"Pi", "/", "2"}]}], ",", " ", 
+          RowBox[{"Pi", "/", "2"}]}], "}"}]}], "\n", "    ", "]"}], ",", "\n",
+       "\n", "    ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Large", " ", "Sofa"}], " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", " ", "6", ",", " ", "0.5"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"3", ",", " ", "7", ",", " ", "1"}], "}"}]}], "]"}], ",", 
+        " ", "Black"}], "]"}], ",", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Sofa", " ", "seat"}], " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", " ", "6", ",", " ", "1"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"3", ",", " ", "7", ",", " ", "2"}], "}"}]}], "]"}], ",", 
+        " ", "White"}], "]"}], ",", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Sofa", " ", "backrest"}], " ", "*)"}], "\n", "\n", "    ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Smaller", " ", "Sofas"}], " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"6", ",", " ", "1", ",", " ", "0.5"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"8", ",", " ", "2", ",", " ", "1"}], "}"}]}], "]"}], ",", 
+        " ", "White"}], "]"}], ",", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"First", " ", "smaller", " ", "sofa", " ", "seat"}], " ", 
+       "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"6", ",", " ", "1", ",", " ", "1"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"8", ",", " ", "2", ",", " ", "2"}], "}"}]}], "]"}], ",", 
+        " ", "Black"}], "]"}], ",", "   ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"First", " ", "smaller", " ", "sofa", " ", "backrest"}], " ", 
+       "*)"}], "\n", "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"6", ",", " ", "7", ",", " ", "0.5"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"8", ",", " ", "8", ",", " ", "1"}], "}"}]}], "]"}], ",", 
+        " ", "White"}], "]"}], ",", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Second", " ", "smaller", " ", "sofa", " ", "seat"}], " ", 
+       "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"6", ",", " ", "7", ",", " ", "1"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"8", ",", " ", "8", ",", " ", "2"}], "}"}]}], "]"}], ",", 
+        " ", "Black"}], "]"}], ",", "   ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Second", " ", "smaller", " ", "sofa", " ", "backrest"}], " ", 
+       "*)"}], "\n", "\n", "    ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"TV", " ", "Cabinet", " ", "and", " ", "TV"}], " ", "*)"}], 
+      "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"8", ",", " ", "3", ",", " ", "0.5"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"9", ",", " ", "4", ",", " ", "1"}], "}"}]}], "]"}], ",", 
+        " ", "White"}], "]"}], ",", "  ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"TV", " ", "Cabinet"}], " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"8.2", ",", " ", "3.2", ",", " ", "1"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"8.8", ",", " ", "3.8", ",", " ", "1.5"}], "}"}]}], "]"}], 
+        ",", " ", "Gray"}], "]"}], ",", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"TV", " ", "screen"}], " ", "*)"}], "\n", "\n", "    ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Bed", " ", "and", " ", "Pillow"}], " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"15", ",", " ", "15", ",", " ", "0"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"20", ",", " ", "18", ",", " ", "1.2"}], "}"}]}], "]"}], 
+        ",", " ", "Black"}], "]"}], ",", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Bed", " ", "Frame"}], " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"20", ",", " ", "16", ",", " ", "1.2"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"18", ",", " ", "17", ",", " ", "1.6"}], "}"}]}], "]"}], 
+        ",", " ", "White"}], "]"}], ",", " ", 
+      RowBox[{"(*", " ", "Pillow", " ", "*)"}], "\n", "\n", "    ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Chair", " ", "beside", " ", "the", " ", "bed"}], " ", "*)"}], 
+      "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"18", ",", " ", "13", ",", " ", "0"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"19", ",", " ", "14", ",", " ", "0.5"}], "}"}]}], "]"}], 
+        ",", " ", "White"}], "]"}], ",", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Chair", " ", "seat"}], " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cuboid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"19", ",", " ", "13", ",", " ", "0.5"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"19", ",", " ", "14", ",", " ", "1.2"}], "}"}]}], "]"}], 
+        ",", " ", "Black"}], "]"}], ",", " ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Chair", " ", "backrest"}], " ", "*)"}], "\n", "\n", "    ", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Round", " ", "Table", " ", 
+        RowBox[{"(", 
+         RowBox[{"repeated", " ", "for", " ", "clarity"}], ")"}]}], " ", 
+       "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cylinder", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"17", ",", " ", "13", ",", " ", "0.8"}], "}"}], ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"17", ",", " ", "13", ",", " ", "1"}], "}"}]}], "}"}], 
+          ",", " ", "0.6"}], "]"}], ",", " ", "White"}], "]"}], ",", " ", 
+      RowBox[{"(*", " ", "Tabletop", " ", "*)"}], "\n", "    ", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Cylinder", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"17", ",", " ", "13", ",", " ", "0"}], "}"}], ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"17", ",", " ", "13", ",", " ", "0.8"}], "}"}]}], "}"}], 
+          ",", " ", "0.2"}], "]"}], ",", " ", "White"}], "]"}]}], "  ", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Table", " ", "leg"}], " ", "*)"}], "\n", "  ", "}"}], ",", 
+    "\n", "  ", 
+    RowBox[{"Boxed", " ", "->", " ", "True"}], ",", "\n", "  ", 
+    RowBox[{"ViewPoint", " ", "->", " ", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", " ", 
+       RowBox[{"-", "2"}], ",", " ", "1"}], "}"}]}], ",", "\n", "  ", 
+    RowBox[{"Lighting", " ", "->", " ", "\"\<Neutral\>\""}]}], "\n", "]"}], 
+  "\n"}]], "Code",
+ CellChangeTimes->{
+  3.945030015124071*^9},ExpressionUUID->"f0179343-0bfd-a740-8af0-\
+844c4c00f89f"]
+},
+WindowSize->{946, 461},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.1 for Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"bcced135-0592-9c4e-9a45-0ae5a78e5e6b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 12909, 315, 1051, "Code",ExpressionUUID->"f0179343-0bfd-a740-8af0-844c4c00f89f"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
