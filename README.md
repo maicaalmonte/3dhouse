@@ -1,12 +1,12 @@
-<<<<<<< HEAD
-**this is just for fun🤣**
-#
-![Screenshot 2025-01-02 142529](https://github.com/user-attachments/assets/4e31b2e9-71cf-41e3-b22d-474dcfedb1e2)
-#
-![Screenshot 2025-01-02 142456](https://github.com/user-attachments/assets/8ff89308-64f5-458a-8e0d-a5190719df55)
 
-
-=======
+**🖤🤍**
 #
-![Screenshot 2025-01-02 203114](https://github.com/user-attachments/assets/246e5219-8b2a-4e93-aa15-cfb92541fcce)
->>>>>>> 38d6d34c0aa82f8dcb4519229e9c3f47baafe73f
+**H O B B Y**
+#
+![Screenshot 2025-01-05 094633](https://github.com/user-attachments/assets/198da542-c856-481f-b8dc-629ec291cfe7)
+
+#
+![Screenshot 2025-01-05 093929](https://github.com/user-attachments/assets/195c20c0-a996-4a00-a2d2-1b4de89a9e46)
+#
+![Screenshot 2025-01-05 093945](https://github.com/user-attachments/assets/7aab69bb-4fbf-44b8-baea-722371225904)
+
