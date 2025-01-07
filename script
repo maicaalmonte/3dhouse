@@ -1,0 +1,59 @@
+#saving the script here
+
+Graphics3D[
+  {
+    (* Floor: This is the base of the room where everything sits *)
+    Style[Cuboid[{0, 0, 0}, {20, 20, 0.2}], Opacity[0.3], LightBlue, Specularity[White, 100]],
+
+    (* Round Table: Represents a circular tabletop with a cylindrical base. *)
+    Style[Cylinder[{{5, 5, 0.6}, {5, 5, 0.8}}, 1], White], (* Tabletop *)
+    Style[Cylinder[{{5, 5, 0}, {5, 5, 0.6}}, 0.2], White], (* Table leg *)
+
+    (* Chairs around the table *)
+    Table[
+      {
+        Style[
+          Cuboid[{5 + 2 Cos[theta] - 0.3, 5 + 2 Sin[theta] - 0.3, 0.5},
+                 {5 + 2 Cos[theta] + 0.3, 5 + 2 Sin[theta] + 0.3, 1}],
+          White
+        ], (* Chair Seat *)
+        Style[
+          Cuboid[{5 + 2 Cos[theta] - 0.3, 5 + 2 Sin[theta] - 0.3, 1},
+                 {5 + 2 Cos[theta] + 0.3, 5 + 2 Sin[theta] - 0.2, 1.5}],
+          Black
+        ]  (* Chair Backrest *)
+      },
+      {theta, 0, 2 Pi - Pi/2, Pi/2}
+    ],
+
+    (* Large Sofa *)
+    Style[Cuboid[{1, 6, 0.5}, {3, 7, 1}], Black], (* Sofa seat *)
+    Style[Cuboid[{1, 6, 1}, {3, 7, 2}], White],  (* Sofa backrest *)
+
+    (* Smaller Sofas *)
+    Style[Cuboid[{6, 1, 0.5}, {8, 2, 1}], White],  (* First smaller sofa seat *)
+    Style[Cuboid[{6, 1, 1}, {8, 2, 2}], Black],   (* First smaller sofa backrest *)
+
+    Style[Cuboid[{6, 7, 0.5}, {8, 8, 1}], White],  (* Second smaller sofa seat *)
+    Style[Cuboid[{6, 7, 1}, {8, 8, 2}], Black],   (* Second smaller sofa backrest *)
+
+    (* TV Cabinet and TV *)
+    Style[Cuboid[{8, 3, 0.5}, {9, 4, 1}], White],  (* TV Cabinet *)
+    Style[Cuboid[{8.2, 3.2, 1}, {8.8, 3.8, 1.5}], Gray], (* TV screen *)
+
+    (* Bed and Pillow *)
+    Style[Cuboid[{15, 15, 0}, {20, 18, 1.2}], Black], (* Bed Frame *)
+    Style[Cuboid[{20, 16, 1.2}, {18, 17, 1.6}], White], (* Pillow *)
+
+    (* Chair beside the bed *)
+    Style[Cuboid[{18, 13, 0}, {19, 14, 0.5}], White], (* Chair seat *)
+    Style[Cuboid[{19, 13, 0.5}, {19, 14, 1.2}], Black], (* Chair backrest *)
+
+    (* Round Table (repeated for clarity) *)
+    Style[Cylinder[{{17, 13, 0.8}, {17, 13, 1}}, 0.6], White], (* Tabletop *)
+    Style[Cylinder[{{17, 13, 0}, {17, 13, 0.8}}, 0.2], White]  (* Table leg *)
+  },
+  Boxed -> True,
+  ViewPoint -> {2, -2, 1},
+  Lighting -> "Neutral"
+]
